@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    border: 0;
+    outline: none;
+    /* z-index: 2000; */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 7rem;
+    overflow-x: hidden;
+}
+
+section,
+header {
+    padding: 2rem 9%;
+}
+
+header {
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #83b6c72c;
+    position: fixed;
+    top: 100; left: 0; right: 0;
+    z-index: 10000;
+}
+
+header a {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #454545;
+    letter-spacing: .2rem;
+}
+
+#menu {
+    font-size: 2.3rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.home {
+    background-image: url(/bg-hand.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    position: absolute;
+    top: 98; left: 0; right:  0;
+}
+
+.heading {
+    margin-bottom: 15%;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .05rem #443;
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events:  none;
+    position: relative;
+}
+
+
+.heading span {
+    margin-bottom: 15%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #443;
+    font-size: 3rem;
+}
+
+.btn {
+    align-self: flex-start;
+    margin-top: 2rem;
+    background-color: #B9CE;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #bd97bd;
+}
+
+.home .form-area  {
+    border: .1rem solid rgba(238, 238, 238, 0.205);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    margin-top: 5rem;
+    max-width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.home .form-area.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+}
+
+.home .form-area form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.home .form-area form .box {
+    width: 100%;
+    padding: .8rem;
+    font-size: 1.5rem;
+    text-transform: none;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    border: .1rem solid royalblue;
+}
+
+.home .form-area form label {
+    align-self: flex-start;
+    font-size: 1.7rem;
+}
+
+.home .form-area form .additionals {
+    flex: 1 1 8rem;
+    align-self: flex-start;
+}
+
+.home .form-area form .additionals p {
+    padding: .4rem 0;
+    font-size: 1.4rem;
+    margin-top: .3rem;
+}
+
+.home .form-area form .additionals p a {
+    text-decoration: underline;
+    color: #222;
+}
+
+.home .form-area form .box.error {
+    border: .1rem solid #222;
+}
+
+.fault {
+    padding: .3rem 0;
+    color: #000;
+    width:100%;
+    text-align: center;
+    background-color: #B9CEA7;
+    margin-bottom: .4rem;
+    font-size: 1.5rem;
+    animation: opacity 2s ease-out infinite;
+}
+
+@keyframes opacity {
+    0%,100% {
+        opacity: .2;
+    }
+    50% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header, section {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 3rem;
+        margin-bottom: .8rem;
+    }
+    .heading span {
+        font-size: 2rem;
+    }
+    .home .form-area {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        width: 90%;
+        margin-top: 8rem;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    header a {
+        font-size: 2rem;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .heading span {
+        font-size: 1.8rem;
+    }
+    .home .form-area {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    .home .form-area form .box {
+        font-size: 1.2rem;
+        padding:.7rem;
+    }
+    .home .form-area form  label{
+        font-size: 1.2rem;
+    }
+    
+
+}
+

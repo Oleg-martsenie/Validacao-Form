@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+</head>
+<body>
+    <header>
+        <a href="#"> form Validation</a>
+
+        <div id="menu" class="fas fa-user"></div>
+    </header>
+
+    <section class="home">
+
+        <div class="form-area">
+
+        <h1 class="heading">Access your <span>account</span></h1>
+
+        <form action="index.html" method="post" class="b7validator">
+            <label for="user">enter your username</label>
+            <input type="text" name="username" id="user" class="box" data-rules="required|min=2">
+
+            <label for="email">enter your email address</label>
+            <input type="email" name="email field" id="email" class="box" data-rules="required|email">
+
+            <label for="password">enter your password</label>
+            <input type="password" name="password field" id="password" class="box" data-rules="required|min=4">
+
+            <div class="additionals">
+                <p>If you don't remember your password or email, <a href="#">click here</a> </p>
+                <p>Don't have an account? <a href="#">create one</a> </p>
+            </div>
+
+            <input type="submit" value="Create Account" class="btn">
+
+        </form>
+
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
